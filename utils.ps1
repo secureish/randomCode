@@ -63,11 +63,11 @@ Function Invoke-SplitStringEvenly
     $i = 0
     While ($i -le ($TextIn.length-$StringLength)){
         if ($i -eq 0){
-            write-host ($VarName + ' = "' + $TextIn.Substring($i,$StringLength) + '"')
+            Write-Output ($VarName + ' = "' + $TextIn.Substring($i,$StringLength) + '"')
         }else{
-            write-host ($VarName + ' = ' + $VarName + ' + "' + $TextIn.Substring($i,$StringLength) + '"')
+            Write-Output ($VarName + ' = ' + $VarName + ' + "' + $TextIn.Substring($i,$StringLength) + '"')
         }
         $i += $StringLength
     }
-    write-host ($VarName + ' = ' + $VarName + ' + "' + $TextIn.Substring($i) + '"')
+    Write-Output ($VarName + ' = ' + $VarName + ' + "' + $TextIn.Substring($i) + '"')
 }
