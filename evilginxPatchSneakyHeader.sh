@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# if no input arguments supplied, display usage
 if [ $# -ne 1 ]
 then
    echo "Usage: $0 <path to http_proxy.go>"
@@ -33,7 +32,7 @@ sed -n -e 183p -e 350p -e 377,379p -e 381p -e 407p -e 562,566p -e 580p -e 1456,1
 echo
 
 read -p "Are you sure? " -n 1 -r
-echo    # (optional) move to a new line
+echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
    sed -i '183 s/^/\/\//' $1
