@@ -1,0 +1,3 @@
+Run encoded powershell from clipboard
+	& powershell -enc $(get-clipboard)
+
