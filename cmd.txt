@@ -1,0 +1,4 @@
+>>> Get pid of current process
+
+C:\>title myconsole
+C:\>tasklist /v /fo csv | findstr /i "myconsole"
