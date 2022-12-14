@@ -4,3 +4,5 @@ Run encoded powershell from clipboard
 Portscan one-liner
 	0..65535 | % {echo ((new-object Net.Sockets.TcpClient).Connect(VICTIM_IP,$_)) "Port $_ is open!"} 2>$null
 
+Run something against all exes and log it to a file
+	gci -recurse *.exe | select fullname | ForEach-Object { $file=$_.fullname; C:\tools\someTool.exe --param blah --otherparam $file | Out-File -Append -NoClobber -FilePath 'C:\tools\OUTPUT\someTool_vs_all_exes.txt'  }
